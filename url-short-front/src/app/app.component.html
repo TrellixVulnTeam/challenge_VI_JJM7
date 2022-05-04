@@ -1,0 +1,15 @@
+<form [formGroup]="form" (submit)="submitURL()">
+	<mat-form-field appearance="fill">
+		<mat-label>Input</mat-label>
+		<input matInput formControlName="url" />
+	</mat-form-field>
+
+	<button mat-raised-button type="submit">Basic</button>
+</form>
+
+<div *ngIf="this.showStats === true">
+	Original URL = {{ this.stats.originalURL }} <br />
+	Short URL = {{ this.stats.shortURL }} <br />
+	Times Accessed = {{ this.stats.timesAccessed }} <br />
+	Times Shortened = {{ this.stats.timesShortened }} <br />
+</div>
